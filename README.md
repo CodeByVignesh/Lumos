@@ -1,5 +1,8 @@
 # Lumos: Your Personal AI Concierge
 
+![UI](UI.png)
+
+
 ### Problem Statement
 Modern life is a juggling act. We switch between a dozen apps just to manage our basic needs: a recipe app for dinner, a grocery app for ingredients, a travel site for vacations, and a calendar to fit it all in. This fragmentation creates cognitive load and friction. We spend more time *managing* our lives than actually *living* them. The problem isn't a lack of information; it's a lack of **integration and intelligent action**.
 
