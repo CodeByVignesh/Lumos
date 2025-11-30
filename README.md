@@ -1,2 +1,41 @@
-# Lumos
-Personal AI Agent
+# Lumos: Your Personal AI Concierge
+
+### Problem Statement
+Modern life is a juggling act. We switch between a dozen apps just to manage our basic needs: a recipe app for dinner, a grocery app for ingredients, a travel site for vacations, and a calendar to fit it all in. This fragmentation creates cognitive load and friction. We spend more time *managing* our lives than actually *living* them. The problem isn't a lack of information; it's a lack of **integration and intelligent action**.
+
+### Why agents?
+Traditional software is rigid; it follows pre-defined paths. LLMs are creative but often lack the ability to execute complex, multi-step tasks reliably. **Agents** are the bridge. They are the right solution because:
+1.  **Specialization:** We can have a "Meal Agent" that knows nutrition and a "Travel Agent" that understands flight logistics, rather than one monolithic model trying to do everything.
+2.  **Tool Use:** Agents can actively search the web, query databases, and potentially perform actions (like booking), turning intent into reality.
+3.  **Reasoning:** Agents can break down a high-level goal ("Plan a romantic weekend in Paris") into actionable steps (flights, hotels, dinner reservations) and execute them in order.
+
+### What you created
+I built **Lumos**, a unified personal concierge interface.
+*   **Architecture:** It uses a **Multi-Agent System** orchestrated by a central "Brain".
+    *   **Frontend:** A sleek, responsive React application (Vite + Tailwind CSS) that provides a chat interface and real-time widgets (like price watches).
+    *   **Backend:** A Python-based API (FastAPI) hosted on **Firebase Cloud Functions**.
+    *   **The Brain (Orchestrator):** A master agent powered by **Google Gemini** that analyzes user intent and routes tasks to specialized sub-agents.
+    *   **Sub-Agents:**
+        *   🥦 **Meal Agent:** Plans menus and generates recipes.
+        *   🛒 **Shopping Agent:** Manages grocery lists and finds products.
+        *   ✈️ **Travel Agent:** Searches for destinations and plans itineraries.
+
+### Demo
+
+![Lumos Project Thumbnail](lumos_thumbnail.png)
+
+The application allows a user to say "Plan a vegetarian dinner for two and add the ingredients to my shopping list," and the system seamlessly coordinates between the Meal Agent (to pick the recipe) and the Shopping Agent (to list the items).
+
+### The Build
+I used a modern, scalable tech stack to build Lumos:
+*   **AI Model:** Google Gemini (via Google AI SDK) for reasoning and generation.
+*   **Backend:** Python & FastAPI, wrapped with `a2wsgi` for serverless deployment.
+*   **Frontend:** React, TypeScript, and Tailwind CSS for a premium user experience.
+*   **Infrastructure:** Firebase (Hosting for the web app, Cloud Functions for the backend).
+*   **Tools:** `git` for version control, `npm` & `pip` for dependency management.
+
+### If I had more time, this is what I'd do
+1.  **Real API Integrations:** Connect the Travel Agent to real flight APIs (like Amadeus or Skyscanner) and the Shopping Agent to Instacart/Amazon for actual purchasing.
+2.  **User Authentication:** Implement Firebase Auth to save user preferences, dietary restrictions, and past trips securely.
+3.  **Voice Interface:** Add speech-to-text and text-to-speech so users can talk to Lumos while cooking or driving.
+4.  **Proactive Suggestions:** Have the agents run in the background (using Cloud Tasks) to find flight deals or suggest recipes based on what's already in the fridge.

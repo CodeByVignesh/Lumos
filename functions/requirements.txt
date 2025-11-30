@@ -1,0 +1,8 @@
+google-generativeai
+fastapi
+uvicorn
+python-dotenv
+pydantic
+firebase-functions
+firebase-admin
+a2wsgi
