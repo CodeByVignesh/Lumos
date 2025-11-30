@@ -1,6 +1,6 @@
 # Lumos: Your Personal AI Concierge
 
-![UI](UI.png)
+![Lumos Project Thumbnail](lumos_thumbnail.png)
 
 
 ### Problem Statement
@@ -33,7 +33,7 @@ This modular design allows us to easily add new capabilities (like a "Calendar A
 
 ### Demo
 
-![Lumos Project Thumbnail](lumos_thumbnail.png)
+![UI](UI.png)
 
 The application allows a user to say "Plan a vegetarian dinner for two and add the ingredients to my shopping list," and the system seamlessly coordinates between the Meal Agent (to pick the recipe) and the Shopping Agent (to list the items).
 
