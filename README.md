@@ -14,14 +14,22 @@ Traditional software is rigid; it follows pre-defined paths. LLMs are creative b
 
 ### What you created
 I built **Lumos**, a unified personal concierge interface.
-*   **Architecture:** It uses a **Multi-Agent System** orchestrated by a central "Brain".
-    *   **Frontend:** A sleek, responsive React application (Vite + Tailwind CSS) that provides a chat interface and real-time widgets (like price watches).
-    *   **Backend:** A Python-based API (FastAPI) hosted on **Firebase Cloud Functions**.
-    *   **The Brain (Orchestrator):** A master agent powered by **Google Gemini** that analyzes user intent and routes tasks to specialized sub-agents.
-    *   **Sub-Agents:**
-        *   🥦 **Meal Agent:** Plans menus and generates recipes.
-        *   🛒 **Shopping Agent:** Manages grocery lists and finds products.
-        *   ✈️ **Travel Agent:** Searches for destinations and plans itineraries.
+
+### Architecture Diagram
+
+![Lumos Architecture Diagram](lumos_architecture.png)
+
+The system is built on a modern, event-driven architecture designed for scalability and intelligent reasoning:
+
+1.  **Frontend (React + Vite):** The user interacts with a responsive web interface. It handles chat input and renders dynamic widgets (like price charts) in real-time.
+2.  **Backend (Firebase Cloud Functions):** A serverless Python environment running **FastAPI**. It acts as the API gateway, receiving user requests and managing the session state.
+3.  **Orchestrator Agent (The Brain):** The core of the system. This agent uses **Google Gemini** to analyze the user's natural language request. It determines *intent* (e.g., "Is this about food or travel?") and routes the task to the appropriate sub-agent.
+4.  **Sub-Agents:** Specialized agents that perform specific tasks:
+    *   🥦 **Meal Agent:** Expert in nutrition and recipes.
+    *   🛒 **Shopping Agent:** Handles inventory and product search.
+    *   ✈️ **Travel Agent:** Manages destination search and itinerary planning.
+
+This modular design allows us to easily add new capabilities (like a "Calendar Agent") without rewriting the core logic.
 
 ### Demo
 
